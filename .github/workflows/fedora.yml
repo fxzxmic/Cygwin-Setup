@@ -22,3 +22,9 @@ jobs:
 
     - name: Build
       run: packaging-scripts/conf.sh upx x86_64
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        name: build-output
+        path: ./
