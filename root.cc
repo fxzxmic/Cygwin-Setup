@@ -145,14 +145,6 @@ directory_is_rootdir ()
 }
 
 static int
-directory_has_spaces ()
-{
-  if (std::string(get_root_dir()).find(' ') != std::string::npos)
-    return 1;
-  return 0;
-}
-
-static int
 directory_contains_wrong_version (HWND h)
 {
   HANDLE fh;
@@ -288,8 +280,6 @@ RootPage::OnNext ()
     }
   else if (get_root_dir() != orig_root_dir &&
            directory_is_rootdir () && (IDNO == yesno (h, IDS_ROOT_SLASH)))
-    return -1;
-  else if (directory_has_spaces () && (IDNO == yesno (h, IDS_ROOT_SPACE)))
     return -1;
   else if (directory_contains_wrong_version (h))
     return -1;

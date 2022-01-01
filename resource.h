@@ -1,7 +1,6 @@
 // Strings
 
 #define IDS_ROOT_SLASH                    100
-#define IDS_ROOT_SPACE                    101
 #define IDS_ERR_OPEN_WRITE                103
 #define IDS_SETUPINI_MISSING              104
 #define IDS_OLD_SETUPINI                  105

@@ -288,9 +288,9 @@ CAPTION "Cygwin Setup - Installation Status and Create Icons"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL         "Create icon on &Desktop",IDC_ROOT_DESKTOP,"Button",
-                    BS_AUTOCHECKBOX,108,78,100,8
+                    BS_CHECKBOX,108,78,100,8
     CONTROL         "Add icon to &Start Menu",IDC_ROOT_MENU,"Button",
-                    BS_AUTOCHECKBOX,108,93,100,8
+                    BS_CHECKBOX,108,93,100,8
     ICON            IDI_CYGWIN,IDC_HEADICON,SETUP_HEADICON_X,0,21,20
     CONTROL         "",IDC_HEADSEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,0,28,
                     SETUP_STANDARD_DIALOG_W,1
@@ -560,7 +560,6 @@ CYGWIN-TERMINAL.ICON    FILE    "cygwin-terminal.ico"
 STRINGTABLE
 BEGIN
     IDS_ROOT_SLASH          "Warning: we recommend you do not use the root of your hard drive as the cygwin root, to prevent possible conflicts with other programs.  Proceed anyway?"
-    IDS_ROOT_SPACE          "You should not choose a root path that include spaces in directory names.  Proceed anyway?"
     IDS_ERR_OPEN_WRITE      "Can't open %s for writing: %s"
     IDS_SETUPINI_MISSING    "Unable to get %s from <%s>"
     IDS_OLD_SETUPINI        "This setup.ini is older than the one you used last time you installed cygwin.  Proceed anyway?"

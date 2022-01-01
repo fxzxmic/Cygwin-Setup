@@ -475,7 +475,6 @@ END
 STRINGTABLE
 BEGIN
     IDS_ROOT_SLASH          "Attention : nous recommandons de ne PAS utiliser la racine du disque dur comme racine de Cygwin pour éviter des conflits avec d'autres programmes. Continuer quand même ?"
-    IDS_ROOT_SPACE          "Vous ne devriez pas utiliser un chemin racine qui inclus des espaces dans les noms de dossiers. Continuer quand même ?"
     IDS_ERR_OPEN_WRITE      "Impossible d'ouvrir %s en écriture : %s"
     IDS_SETUPINI_MISSING    "Impossible de récupérer %s depuis « %s »"
     IDS_OLD_SETUPINI        "Ce fichier setup.ini est plus ancien que celui utilisé lors de la dernière installation de Cygwin. Continuer quand même ?"
