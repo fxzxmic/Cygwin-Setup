@@ -256,8 +256,8 @@ load_dialog (HWND h)
      }
   else
     {
-      EnableWindow (GetDlgItem (h, IDC_ROOT_DESKTOP), TRUE);
-      EnableWindow (GetDlgItem (h, IDC_ROOT_MENU), TRUE);
+      EnableWindow (GetDlgItem (h, IDC_ROOT_DESKTOP), FALSE);
+      EnableWindow (GetDlgItem (h, IDC_ROOT_MENU), FALSE);
       ShowWindow (GetDlgItem(h, IDC_DESKTOP_HEADER_DOWNLOAD), SW_HIDE);
       ShowWindow (GetDlgItem(h, IDC_DESKTOP_HEADER_TITLE_DOWNLOAD), SW_HIDE);
       ShowWindow (GetDlgItem(h, IDC_DESKTOP_HEADER_INSTALL), SW_SHOW);
