@@ -274,17 +274,24 @@ mknativesymlink (const char *from, const char *to)
   wfrom[1] = '?';
 
   size_t tlen = strlen (to) + 7;
-  wchar_t wto[tlen];
+  wchar_t wrelto[tlen];
+  wchar_t *wto;
   if (to[0] == '/')
     {
-      absto = get_root_dir();
-      absto.append(to);
-      mklongpath (wto, to, tlen);
-      wto[1] = '?';
+      wto = wabsto;
+      // convert back from nt namespace to win32 file namespace to use with
+      // CreateSymbolicLinkW()
+      wabsto[1] = '\\';
+      // Some parts of Windows don't correctly handle a win32 file namespace
+      // prefix in the symlink target. So, for maximum interoperability, we use
+      // a short path instead, if the target path will be less than MAX_PATH.
+      if (wcslen(wabsto) < (MAX_PATH + 4))
+        wto = wabsto + 4;
     }
   else
     {
-      mklongrelpath (wto, to, tlen);
+      mklongrelpath (wrelto, to, tlen);
+      wto = wrelto;
     }
 
   DWORD flags = isdir ? SYMBOLIC_LINK_FLAG_DIRECTORY : 0;
