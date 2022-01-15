@@ -254,9 +254,9 @@ CAPTION "Assistant Cygwin - État de l'installation et création des icônes"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL         "Créer une icône sur le &bureau",IDC_ROOT_DESKTOP,"Button",
-                    BS_CHECKBOX,108,78,110,8
+                    BS_AUTOCHECKBOX,108,78,110,8
     CONTROL         "Ajouter une icône au menu &Démarrer",IDC_ROOT_MENU,"Button",
-                    BS_CHECKBOX,108,93,140,8
+                    BS_AUTOCHECKBOX,108,93,140,8
     ICON            IDI_CYGWIN,IDC_HEADICON,SETUP_HEADICON_X,0,21,20
     CONTROL         "",IDC_HEADSEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,0,28,
                     SETUP_STANDARD_DIALOG_W,1

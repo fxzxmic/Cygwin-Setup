@@ -288,9 +288,9 @@ CAPTION "Cygwin Setup - Installation Status and Create Icons"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL         "Create icon on &Desktop",IDC_ROOT_DESKTOP,"Button",
-                    BS_CHECKBOX,108,78,100,8
+                    BS_AUTOCHECKBOX,108,78,100,8
     CONTROL         "Add icon to &Start Menu",IDC_ROOT_MENU,"Button",
-                    BS_CHECKBOX,108,93,100,8
+                    BS_AUTOCHECKBOX,108,93,100,8
     ICON            IDI_CYGWIN,IDC_HEADICON,SETUP_HEADICON_X,0,21,20
     CONTROL         "",IDC_HEADSEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,0,28,
                     SETUP_STANDARD_DIALOG_W,1
