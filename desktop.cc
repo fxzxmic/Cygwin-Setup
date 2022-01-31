@@ -40,7 +40,7 @@
 #include "getopt++/BoolOption.h"
 #include "LogFile.h"
 
-static BoolOption NoShortcutsOption (false, 'n', "no-shortcuts", "Disable creation of desktop and start menu shortcuts");
+static BoolOption NoShortcutsOption (true, 'n', "no-shortcuts", "Disable creation of desktop and start menu shortcuts");
 static BoolOption NoStartMenuOption (false, 'N', "no-startmenu", "Disable creation of start menu shortcut");
 static BoolOption NoDesktopOption (false, 'd', "no-desktop", "Disable creation of desktop shortcut");
 
