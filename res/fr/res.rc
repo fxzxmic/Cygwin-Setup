@@ -101,10 +101,10 @@ BEGIN
                     BS_AUTORADIOBUTTON | WS_TABSTOP | WS_GROUP,13,89,130,8
     CONTROL         "Juste &Moi",IDC_ROOT_USER,"Button",BS_AUTORADIOBUTTON |
                     WS_TABSTOP,13,130,130,8
-    LTEXT           "Cygwin sera disponible pour tous les utilisateurs",
+    LTEXT           "Cygwin sera disponible pour tous les utilisateurs.",
                     IDC_ALLUSERS_TEXT,25,101,300,28
     LTEXT           "Cygwin sera disponible pour tous les utilisateurs "
-                    "mais les icones et les menus uniquement pour l'utilisateur "
+                    "mais les icônes et les menus uniquement pour l'utilisateur "
                     "en cours. Ne sélectionner que si vous n'avez pas les droits "
                     "administrateur ou en cas de besoin spécifique.",
                     IDC_JUSTME_TEXT,25,140,300,32
@@ -195,7 +195,7 @@ CAPTION "Authentification proxy requise"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON            IDI_CYGWIN,IDC_HEADICON,5,5,21,20
-    LTEXT           "ID &Utilisateur",IDC_STATIC,5,28,55,15,SS_CENTERIMAGE,
+    LTEXT           "&Identifiant proxy",IDC_STATIC,5,28,55,15,SS_CENTERIMAGE,
                     WS_EX_RIGHT
     EDITTEXT        IDC_NET_USER,65,28,145,12,ES_AUTOHSCROLL
     LTEXT           "&Mot de passe",IDC_STATIC,10,43,50,15,SS_CENTERIMAGE,
@@ -232,7 +232,7 @@ BEGIN
     LTEXT           "Programme Assistant Cygwin",
                     IDC_STATIC_WELCOME_TITLE,115,1,195,24
     LTEXT           "Cet assistant est utilisé pour l'installation initiale "
-		    "de l'environnement Cygwin ainsi que pour ses mises à jour."
+		    "de l'environnement Cygwin ainsi que pour ses mises à jour. "
 		    "Les pages suivantes vont vous guider durant l'installation. "
                     "\r\n\r\n"
 		    "Notez que Cygwin inclus un grand nombre de paquets "
@@ -279,7 +279,7 @@ CAPTION "Authentification FTP requise"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON            IDI_CYGWIN,IDC_HEADICON,5,5,21,20
-    LTEXT           "ID &Utilisateur",IDC_STATIC,5,28,55,15,SS_CENTERIMAGE,
+    LTEXT           "&Identifiant",IDC_STATIC,5,28,55,15,SS_CENTERIMAGE,
                     WS_EX_RIGHT
     EDITTEXT        IDC_NET_USER,65,28,145,12,ES_AUTOHSCROLL
     LTEXT           "&Mot de passe",IDC_STATIC,10,43,50,15,SS_CENTERIMAGE,
@@ -319,13 +319,13 @@ BEGIN
     CONTROL         "", IDC_HEADSEPARATOR, "Static", SS_BLACKFRAME | SS_SUNKEN,
                     0, 28, SETUP_STANDARD_DIALOG_W, 1
     CONTROL         "", IDC_CHOOSE_LIST, WC_LISTVIEW, LVS_NOSORTHEADER | LVS_REPORT | LVS_SINGLESEL | WS_TABSTOP,
-                     7, 47, SETUP_STANDARD_DIALOG_W - 14, 120, WS_EX_CLIENTEDGE
-    CONTROL         "&Cache les paquets obsolètes", IDC_CHOOSE_HIDE,
+                    SETUP_CHOOSE_X, 47, SETUP_CHOOSE_W, 120, WS_EX_CLIENTEDGE
+    CONTROL         "&Cacher les paquets obsolètes", IDC_CHOOSE_HIDE,
                     "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 7, 167, 160, 14
     ICON            IDI_CYGWIN, IDC_HEADICON, SETUP_HEADICON_X, 0, 21, 20
-    LTEXT           "Sélectionnez les paquets à télécharger",
+    LTEXT           "Sélectionnez les paquets à télécharger.",
                     IDC_CHOOSE_INST_TEXT_DOWNLOAD, 21, 9, 239, 16, NOT WS_GROUP
-    LTEXT           "Sélectionnez les paquets à installer",
+    LTEXT           "Sélectionnez les paquets à installer.",
                     IDC_CHOOSE_INST_TEXT_INSTALL, 21, 9, 239, 16, NOT WS_GROUP
     LTEXT           "Sélection des paquets",IDC_STATIC_HEADER_TITLE,7,0,258,8,
                     NOT WS_GROUP
@@ -340,10 +340,10 @@ BEGIN
     CONTROL         "",IDC_HEADSEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,
                     0,28,SETUP_STANDARD_DIALOG_W,1
     ICON            IDI_CYGWIN,IDC_HEADICON,SETUP_HEADICON_X,0,21,20
-    LTEXT           "Résolution des dépendances",IDC_STATIC_HEADER_TITLE
-                    ,7,0,258,8,NOT WS_GROUP
+    LTEXT           "Résolution des dépendances",IDC_STATIC_HEADER_TITLE,
+                    7,0,258,8,NOT WS_GROUP
     LTEXT           "Les problèmes suivants apparaissent lors de la résolution "
-                    "des dépendances",IDC_STATIC,21,9,239,16,NOT WS_GROUP
+                    "des dépendances.",IDC_STATIC,21,9,239,16,NOT WS_GROUP
     CONTROL         "&Accepter la solution par défaut"
                     ,IDC_PREREQ_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
                     7,167,225,14
@@ -362,8 +362,8 @@ BEGIN
     CONTROL         "",IDC_HEADSEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,
                     0,28,SETUP_STANDARD_DIALOG_W,1
     ICON            IDI_CYGWIN,IDC_HEADICON,SETUP_HEADICON_X,0,21,20
-    LTEXT           "Revoir et confirmer les changements",IDC_STATIC_HEADER_TITLE
-                    ,7,0,258,8,NOT WS_GROUP
+    LTEXT           "Revoir et confirmer les changements",IDC_STATIC_HEADER_TITLE,
+                    7,0,258,8,NOT WS_GROUP
     EDITTEXT        IDC_CONFIRM_EDIT,7,41,325,131,WS_VSCROLL | WS_HSCROLL |
                     ES_LEFT | ES_MULTILINE | ES_READONLY | ES_AUTOHSCROLL |
                     ES_AUTOVSCROLL
@@ -401,13 +401,13 @@ CAPTION "Téléchargement Incomplet"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON            IDI_WARNING,IDC_HEADICON,10,10
-    LTEXT           "Les paquets suivants ont eu des erreurs de téléchargement :",
+    LTEXT           "Les paquets suivants ont des erreurs de téléchargement :",
                     IDC_STATIC,7,8,320,16
     EDITTEXT        IDC_DOWNLOAD_EDIT,7,24,320,88,WS_VSCROLL |
                     ES_LEFT | ES_MULTILINE | ES_READONLY |
                     ES_AUTOVSCROLL
     LTEXT           "Choisissez 'Recommencer' pour relancer le téléchargement, "
-                    "'Précédent' pour revenir à la page de selection des paquets, "
+                    "'Précédent' pour revenir à la page de sélection des paquets, "
                     "'Continuer' pour forcer la suite (NON RECOMMANDÉ), ou "
                     "'Annuler' pour quitter.",
                     IDC_STATIC,7,120,320,24
@@ -426,8 +426,8 @@ BEGIN
     CONTROL         "",IDC_HEADSEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,
                     0,28,SETUP_STANDARD_DIALOG_W,1
     ICON            IDI_CYGWIN,IDC_HEADICON,SETUP_HEADICON_X,0,21,20
-    LTEXT           "Erreurs dans les scripts",IDC_STATIC_HEADER_TITLE
-                    ,7,0,258,8,NOT WS_GROUP
+    LTEXT           "Erreurs dans les scripts",IDC_STATIC_HEADER_TITLE,
+                    7,0,258,8,NOT WS_GROUP
     LTEXT           "Ceci n'indique pas forcément que les paquets concernés"
                     "ne fonctionneront pas, mais consultez "
                     "/var/log/setup.log.full avant de reporter un problème.",
@@ -445,22 +445,22 @@ BEGIN
     ICON            IDI_WARNING,IDC_HEADICON,10,10
     LTEXT           "Impossible d'extraire",
                     IDC_FILE_INUSE_MSG,33,10,234,8,SS_PATHELLIPSIS
-    LTEXT           "Ce fichier est en cours d'utilisation par : ",
+    LTEXT           "Ce fichier est en cours d'utilisation par :",
                     IDC_STATIC,33,28,234,8
     EDITTEXT        IDC_FILE_INUSE_EDIT,33,40,234,32,WS_VSCROLL |
                     ES_LEFT | ES_MULTILINE | ES_READONLY |
                     ES_AUTOVSCROLL | NOT WS_TABSTOP
-    LTEXT           "Choisir «Recommencer» pour recommencer, "
-                    "choisir «Stop» pour arrêter les process et recommencer, ou "
-                    "choisir «Continuer» pour procéder (un reboot sera nécessaire).",
+    LTEXT           "Choisir 'Recommencer' pour recommencer, "
+                    "choisir 'Stop' pour arrêter les process et recommencer, ou "
+                    "choisir 'Continuer' pour procéder (le fichier sera mis à jour après un redémarrage).",
                     IDC_FILE_INUSE_HELP_0,33,80,234,24,NOT WS_GROUP
-    LTEXT           "Choisir «Recommencer» pour ré-essayer, "
-                    "choisir «Tuer» pour tuer les processus et ré-essayer, ou "
-                    "choisir «Continuer» pour poursuivre (le fichier sera mis à jour après un redémarrage).",
+    LTEXT           "Choisir 'Recommencer' pour ré-essayer, "
+                    "choisir 'Tuer' pour tuer les processus et ré-essayer, ou "
+                    "choisir 'Continuer' pour poursuivre (le fichier sera mis à jour après un redémarrage).",
                     IDC_FILE_INUSE_HELP_1,33,80,234,24,NOT WS_GROUP
-    LTEXT           "Choisir «Recommencer» pour ré-essayer, "
-                    "choisir «Tuer» pour forcer la fin des processus et ré-essayer, ou "
-                    "choisir «Continuer» pour poursuivre (le fichier sera mis à jour après un redémarrage).",
+    LTEXT           "Choisir 'Recommencer' pour ré-essayer, "
+                    "choisir 'Tuer' pour forcer la fin des processus et ré-essayer, ou "
+                    "choisir 'Continuer' pour poursuivre (le fichier sera mis à jour après un redémarrage).",
                     IDC_FILE_INUSE_HELP_2,33,80,234,24,NOT WS_GROUP
     PUSHBUTTON      "&Recommencer",IDIGNORE,45,112,55,15
     DEFPUSHBUTTON   "&Stop",IDRETRY,111,112,55,15
@@ -485,7 +485,7 @@ BEGIN
     IDS_ROOT_ABSOLUTE       "Le dossier d'installation doit être absolu, avec à la fois un identificateur de lecteur et une barre oblique au début : C:\\Cygwin"
     IDS_DOWNLOAD_COMPLETE   "Téléchargement terminé"
     IDS_NOLOGFILE           "Impossible d'ouvrir le fichier de trace %s en écriture"
-    IDS_UNINSTALL_COMPLETE  "Désinstallation terminée"
+    IDS_UNINSTALL_COMPLETE  "Désinstallation terminée."
     IDS_ERR_CHDIR           "Impossible de changer le dossier vers %s : %s [%.8x]"
     IDS_OLD_SETUP_VERSION   "Cet assistant est en version %s, mais setup.ini indique que la version %s est disponible.\nVous devriez le mettre à jour pour avoir les dernière fonctionnalités et corrections de bogues."
     IDS_DOWNLOAD_INCOMPLETE "Téléchargement incomplet. Recommencer ?"
@@ -496,7 +496,7 @@ BEGIN
     IDS_QUERY_CORRUPT       "Le fichier %s est corrompu. Effacer et re-télécharger ?"
     IDS_SKIP_PACKAGE	    "%s\nVoulez-vous passer ce paquet ?"
     IDS_UNCAUGHT_EXCEPTION  "Erreur Fatale : exception non traitée\nThread : %s\nType : %s\nMessage : %s"
-    IDS_UNCAUGHT_EXCEPTION_WITH_ERRNO  "Erreur Fatale : exception non traitée\nThread : %s\nType : %s\nMessage: %s\nAppErrNo : %d"
+    IDS_UNCAUGHT_EXCEPTION_WITH_ERRNO  "Erreur Fatale : exception non traitée\nThread : %s\nType : %s\nMessage : %s\nAppErrNo : %d"
     IDS_TRUSTKEEP_TOOLTIP   "Garde tous les paquets à la version installée. "
        "Ceci est équivalent à demander à l'assistant de ne faire aucun "
 	   "changement aux paquets."
@@ -539,7 +539,7 @@ BEGIN
     IDS_NO_MIRROR_LST  "Impossible de télécharger la liste des sites miroirs"
     IDS_PROGRESS_PROGRESS "Progression :"
     IDS_PROGRESS_PACKAGE "Paquet :"
-    IDS_PROGRESS_CONNECTING "Connection..."
+    IDS_PROGRESS_CONNECTING "Connexion..."
     IDS_PROGRESS_CHECKING "Recherche de paquets à télécharger..."
     IDS_PROGRESS_DOWNLOADING "Télécharge..."
     IDS_PROGRESS_PARSING "Analyse..."
@@ -548,8 +548,8 @@ BEGIN
     IDS_PROGRESS_INSTALL "Installe..."
     IDS_PROGRESS_CALCULATING "Calcul..."
     IDS_PROGRESS_POSTINSTALL "Exécution..."
-    IDS_PROGRESS_SOLVING "Résolution des dépendences..."
-    IDS_ACTION_DEFAULT "Default"
+    IDS_PROGRESS_SOLVING "Résolution des dépendances..."
+    IDS_ACTION_DEFAULT "Par défaut"
     IDS_ACTION_INSTALL "Installe"
     IDS_ACTION_UNINSTALL "Désinstalle"
     IDS_ACTION_SKIP "Passe"
@@ -562,7 +562,7 @@ BEGIN
     IDS_VIEW_PENDING "En attente"
     IDS_VIEW_UPTODATE "À jour"
     IDS_VIEW_NOTINSTALLED "Non installé"
-    IDS_VIEW_PICKED "Choisi"
+    IDS_VIEW_PICKED "Sélectionné"
     IDS_VIEW_CATEGORY  "Catégorie"
     IDS_COLUMN_PACKAGE "Paquet"
     IDS_COLUMN_CURRENT "Actuel"
@@ -572,7 +572,7 @@ BEGIN
     IDS_COLUMN_SIZE "Taille"
     IDS_COLUMN_DESCR "Description"
     IDS_MBOX_CAPTION "Assistant Cygwin"
-    IDS_EXTRACTION_FAILED "Impossible d'extraire /%s -- paquet corrompu ?\r\n"
+    IDS_EXTRACTION_FAILED "Impossible d'extraire /%s -- paquet corrompu ?"
     IDS_EXTRACTION_INUSE
         "Incapable d'extraire /%s -- erreur à l'écriture du fichier\r\n"
         "Le fichier est utilisé ou une autre erreur est survenue.\r\n"
@@ -588,8 +588,10 @@ BEGIN
         "L'assistant ne sera pas capable de créer les icônes "
         "Cygwin dans le menu Démarrer ou sur le bureau."
     IDS_UNSUPPORTED_WINDOWS_VERSION "Cygwin n'est pas supporté pour cette version de Windows"
+    IDS_DEPRECATED_WINDOWS_VERSION "Cygwin n'est plus supporté pour cette version de Windows, et sera enlevé dans la prochaine version majeure"
+    IDS_DEPRECATED_WINDOWS_ARCH "Cygwin n'est plus supporté pour Windows 32-bits, et sera enlevé dans la prochaine version majeure"
     IDS_MOUNT_REGISTRY_KEY_FAILED "Impossible de créer la clé de registre pour enregistrer le chemin d'installation"
-    IDS_NIO_ERROR "Erreur Internet: %s"
+    IDS_NIO_ERROR "Erreur Internet : %s"
     IDS_PREREQ_UNSOLVED_PROBLEMS
         "ATTENTION - Problèmes non résolus"
         "\r\n\r\n"
@@ -614,8 +616,8 @@ BEGIN
     IDS_CHOOSER_EMPTY_DOWNLOAD "Rien à télécharger."
     IDS_CHOOSER_EMPTY_INSTALL "Rien à installer ou mettre à jour."
     IDS_ROOT_BROWSE_TITLE "Choisissez le dossier racine de l'installation"
-    // IDS_LOCALDIR_BROWSE_DOWNLOAD_TITLE "XXX: missing translation"
-    // IDS_LOCALDIR_BROWSE_PACKAGE_TITLE  "XXX: missing translation"
+    IDS_LOCALDIR_BROWSE_DOWNLOAD_TITLE "Choisissez le dossier pour le téléchargement"
+    IDS_LOCALDIR_BROWSE_PACKAGE_TITLE  "Choisissez le dossier local"
     IDS_PROGRESS_CHECKING_HASH "Vérification %s pour %s"
     IDS_PROGRESS_DOWNLOADING_FROM "%s depuis %s"
     IDS_CONFIRM_UNINSTALL "Désinstalle"
@@ -626,4 +628,60 @@ BEGIN
     IDS_CONFIRM_SOURCE "(source)"
     IDS_FILE_INUSE_KILL "&Tuer les processus"
     IDS_FILE_INUSE_MSG "Incapable d'extraire"
+END
+
+//
+// Option Helptext String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_HELPTEXT_ERROR "Erreur pendant l'analyse des options."
+    IDS_HELPTEXT_HEADER "Options de la ligne de commandes :"
+    IDS_HELPTEXT_FOOTER "Par défault téléchargement et installation des paquets, sauf si --download ou --local-install sont spécifiés."
+    IDS_HELPTEXT_ALLOW_TEST "Prendre en compte les paquets marqués test"
+    IDS_HELPTEXT_ALLOW_UNSUPPORTED_WINDOWS "Autoriser les vieilles versions de Windows"
+    IDS_HELPTEXT_ARCH "Architecture à installer (x86_64 ou x86)"
+    IDS_HELPTEXT_CATEGORIES "Spécifie les catégories à installer"
+    // IDS_HELPTEXT_COMPACTOS "XXX: missing translation"
+    IDS_HELPTEXT_DELETE_ORPHANS "Supprimer les paquets orphelins"
+    IDS_HELPTEXT_DISABLE_ANTIVIRUS "Inhibe les anti-virus buggés à l'exécution"
+    IDS_HELPTEXT_DOWNLOAD "Télécharger depuis internet"
+    IDS_HELPTEXT_FORCE_CURRENT "Choisir la version courante pour tous les paquets"
+    IDS_HELPTEXT_HELP "Afficher l'aide"
+    IDS_HELPTEXT_INCLUDE_SOURCE "Ajouter automatiquement les sources de chaque paquet installé"
+    IDS_HELPTEXT_INI_BASENAME "Utiliser un nom de base différent, p.ex. «toto», au lieu de «setup»"
+    IDS_HELPTEXT_KEEP_UNTRUSTED_KEYS "Utiliser les clés non-fiables et les garder"
+    IDS_HELPTEXT_LANG "Choisir la langue de l'IHM"
+    IDS_HELPTEXT_LOCAL_INSTALL "Installer depuis un répertoire local"
+    IDS_HELPTEXT_LOCAL_PACKAGE_DIR "Dossier local pour les paquets"
+    IDS_HELPTEXT_MIRROR_MODE "Ne pas vérifier la présence d'un paquet depuis un dossier local (celui-ci doit être un miroir propre !)"
+    IDS_HELPTEXT_NO_ADMIN "Ne pas vérifier et forcer à installer en tant qu'administrateur"
+    IDS_HELPTEXT_NO_DESKTOP "Pas de création de raccourci de bureau"
+    IDS_HELPTEXT_NO_REPLACEONREBOOT "Inhibe le remplacement des fichiers en cours d'utilisation au prochain redémarrage"
+    IDS_HELPTEXT_NO_SHORTCUTS "Pas de création de raccourcis de bureau et de menu"
+    IDS_HELPTEXT_NO_STARTMENU "Pas de création de raccourci de menu"
+    IDS_HELPTEXT_NO_VERIFY "Ne pas vérifier les signatures de setup.ini"
+    IDS_HELPTEXT_NO_VERSION_CHECK "Ne pas vérifier si une version plus récente de l'assistant est disponible"
+    IDS_HELPTEXT_NO_WARN_DEPRECATED_WINDOWS "Ne pas avertir pour les vieilles versions de Windows"
+    IDS_HELPTEXT_OLD_KEYS "Utiliser les anciennes clés de cygwin.com"
+    IDS_HELPTEXT_ONLY_SITE "Ignorer tous les sites sauf ceux spécifiés par -s"
+    IDS_HELPTEXT_PACKAGES "Spécifie les paquets à installer"
+    IDS_HELPTEXT_PACKAGE_MANAGER "Mode assistant sélection seulement"
+    IDS_HELPTEXT_PROXY "Proxy HTTP/FTP (serveur:port)"
+    IDS_HELPTEXT_PRUNE_INSTALL "Purger l'installation pour n'avoir que les paquets demandés"
+    IDS_HELPTEXT_PUBKEY "URL ou chemin complet d'une clé publique supplémentaire (format RFC4880)"
+    IDS_HELPTEXT_QUIET_MODE "Assistant sans messages"
+    IDS_HELPTEXT_REMOVE_CATEGORIES "Spécifie les catégories à désinstaller"
+    IDS_HELPTEXT_REMOVE_PACKAGES "Spécifie les paquets à désinstaller"
+    IDS_HELPTEXT_ROOT "Dossier racine de l'installation"
+    IDS_HELPTEXT_SEXPR_PUBKEY "Clé publique DSA supplémentaire au format s-expr"
+    IDS_HELPTEXT_SITE "URL du site de téléchargement"
+    IDS_HELPTEXT_SYMLINK_TYPE "Type de lien symbolique (lnk, native, sys, wsl)"
+    IDS_HELPTEXT_UNTRUSTED_KEYS "Utiliser les clés non-fiables enregistrées"
+    IDS_HELPTEXT_UPGRADE_ALSO "Mettre à jour les paquets installés"
+    IDS_HELPTEXT_USER_AGENT "« User agent » pour les requêtes HTTP"
+    IDS_HELPTEXT_VERBOSE "Affichages verbeux"
+    IDS_HELPTEXT_VERSION "Montrer la version"
+    IDS_HELPTEXT_WAIT "Attendre le process fils en mode élévation"
 END
